@@ -1,5 +1,5 @@
-const ws = new WebSocket("ws://localhost:8080");
-const URL = "http://localhost:8080/";
+const ws = new WebSocket("wss://battleship-production-5a6e.up.railway.app");
+const URL = "https://battleship-production-5a6e.up.railway.app/";
 var canvas = document.getElementById("canvas");
 var ctx;
 ws.addEventListener("open", () => {
@@ -770,7 +770,7 @@ Vue.createApp({
       const protocol = window.location.protocol.includes("https")
         ? "wss"
         : "ws";
-      this.socket = new WebSocket(`${protocol}://localhost:8080`);
+       this.socket = new WebSocket(`${protocol}://battleship-production-5a6e.up.railway.app`);
       this.socket.onopen = function () {
         console.log("Connected to websocket");
       };
