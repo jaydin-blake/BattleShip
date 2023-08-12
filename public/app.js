@@ -796,7 +796,7 @@ Vue.createApp({
         }
         if (msg.EventType == "Win") {
           if (msg.Data.turn != this.player) {
-            this.Status = "You Win!";
+            this.status = "You Win!";
             this.page = 5;
             this.win = true;
           } else {
